@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 import 'package:slash_product_details_app/core/widgets/appbar/custom_appbar.dart';
+import 'package:slash_product_details_app/features/product_details/ui/widgets/product_colors_list/product_colors_list.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/product_info/product_info.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -14,7 +16,13 @@ class ProductDetailsScreen extends StatelessWidget {
         body: ListView(
           padding:
               EdgeInsets.symmetric(horizontal: 20 * SizeConfig.horizontalBlock),
-          children: const [ProductInfo()],
+          children: [
+            const ProductInfo(),
+            Gap(20 * SizeConfig.verticalBlock),
+            SizedBox(
+                height: 50 * SizeConfig.verticalBlock,
+                child: const Center(child: ProductColorsList()))
+          ],
         ),
       ),
     );
