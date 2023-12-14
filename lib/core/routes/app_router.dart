@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:slash_product_details_app/features/product_details/ui/product_details_screen.dart';
+import 'package:slash_product_details_app/features/product_details/ui/screens/product_details_screen.dart';
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {
