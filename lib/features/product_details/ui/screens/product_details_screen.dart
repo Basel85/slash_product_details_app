@@ -4,6 +4,7 @@ import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 import 'package:slash_product_details_app/core/widgets/appbar/custom_appbar.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/product_colors_list/product_colors_list.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/product_info/product_info.dart';
+import 'package:slash_product_details_app/features/product_details/ui/widgets/variations_properties_section/variations_properties_section.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
@@ -19,9 +20,17 @@ class ProductDetailsScreen extends StatelessWidget {
           children: [
             const ProductInfo(),
             Gap(20 * SizeConfig.verticalBlock),
-            SizedBox(
-                height: 50 * SizeConfig.verticalBlock,
-                child: const Center(child: ProductColorsList()))
+            const ProductColorsList(),
+            Gap(20 * SizeConfig.verticalBlock),
+            const VariationsPropertiesSection(
+              variationsPropertyName: "Select Size",
+              variationsPropertiesValues: ["10X15", "15X20", "20X25"],
+            ),
+            Gap(20 * SizeConfig.verticalBlock),
+            const VariationsPropertiesSection(
+              variationsPropertyName: "Select Material",
+              variationsPropertiesValues: ["Cotton"],
+            ),
           ],
         ),
       ),
