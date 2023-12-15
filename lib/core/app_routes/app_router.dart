@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:slash_product_details_app/features/home/ui/screens/home_screen.dart';
 import 'package:slash_product_details_app/features/product_details/ui/screens/product_details_screen.dart';
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case '/product_details_screen':
+      case '/homeScreen':
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
+        );
+      case '/productDetailsScreen':
         return MaterialPageRoute(
           builder: (_) => const ProductDetailsScreen(),
         );

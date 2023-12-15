@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:slash_product_details_app/core/app_colors/app_colors.dart';
+import 'package:slash_product_details_app/core/constants/screen_navigation_paths.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 import 'package:slash_product_details_app/core/app_routes/app_router.dart';
 
@@ -14,8 +16,12 @@ class MyApp extends StatelessWidget {
     SizeConfig.init(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: Colors.black),
-      initialRoute: '/product_details_screen',
+      theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.primaryColor,
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+              primary: AppColors.primaryColor,
+              secondary: AppColors.secondaryColor)),
+      initialRoute: homeScreenPath,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }
