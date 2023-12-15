@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
-import 'package:slash_product_details_app/core/routes/app_router.dart';
+import 'package:slash_product_details_app/core/app_routes/app_router.dart';
 
 void main() {
   runApp(const MyApp());
