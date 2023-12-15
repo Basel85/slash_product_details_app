@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:slash_product_details_app/core/app_colors/app_colors.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
+import 'package:slash_product_details_app/core/widgets/custom_appbar/custom_appbar_back_button.dart';
 import 'package:slash_product_details_app/core/widgets/custom_appbar/custom_appbar_title.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -16,6 +17,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leadingWidth: !centerTitle
+          ? 125 * SizeConfig.horizontalBlock
+          : 30 * SizeConfig.horizontalBlock,
       backgroundColor: AppColors.primaryColor,
       leading: !centerTitle
           ? Center(
@@ -23,10 +27,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               padding: EdgeInsets.only(left: 10.0 * SizeConfig.horizontalBlock),
               child: CustomAppBarTitle(
                 title: title,
-                fontSize: 24,
+                fontSize: 40,
               ),
             ))
-          : null,
+          : Padding(
+              padding: EdgeInsets.only(left: 8 * SizeConfig.horizontalBlock),
+              child: const CustomAppBarBackButton()),
       title: centerTitle
           ? CustomAppBarTitle(
               title: title,
