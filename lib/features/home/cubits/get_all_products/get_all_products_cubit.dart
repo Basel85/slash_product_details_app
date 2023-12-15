@@ -18,7 +18,7 @@ class GetAllProductsCubit extends Cubit<GetAllProductsState> {
       emit(GetAllProductsFailureState(errorMessage: "Couldn't find the product"));
     } on FormatException {
       emit(GetAllProductsFailureState(errorMessage: "Bad response format"));
-    } catch (e) {
+    } catch (_) {
       emit(GetAllProductsFailureState(errorMessage: "Something went wrong! Please try again"));
     }
   }
