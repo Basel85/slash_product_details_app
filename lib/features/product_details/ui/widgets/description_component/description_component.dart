@@ -24,6 +24,10 @@ class DescriptionComponent extends StatelessWidget {
             horizontal: 20 * SizeConfig.horizontalBlock,
             vertical: 15 * SizeConfig.verticalBlock),
         iconColor: Colors.white,
-        children: [DescriptionText(descriptionText: descriptionText,)]);
+        children: [
+          DescriptionText(
+            descriptionText: descriptionText,
+          )
+        ]);
   }
 }

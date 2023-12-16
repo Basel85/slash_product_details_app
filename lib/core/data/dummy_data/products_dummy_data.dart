@@ -48,6 +48,42 @@ class ProductsDummyData {
               ProductPropertyAndValue(property: "Material", value: "Polyester"),
             ],
           ),
+          ProductVariation(
+            id: 103,
+            productId: 1,
+            price: 69.99,
+            quantity: 25,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Color", value: "#008000"),
+              ProductPropertyAndValue(property: "Size", value: "XL"),
+              ProductPropertyAndValue(property: "Material", value: "Polyester"),
+            ],
+          ),
+          ProductVariation(
+            id: 104,
+            productId: 1,
+            price: 79.99,
+            quantity: 0,
+            inStock: false,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Color", value: "#008000"),
+              ProductPropertyAndValue(property: "Size", value: "L"),
+              ProductPropertyAndValue(property: "Material", value: "Cotton"),
+            ],
+          ),
         ],
         availableProperties: [
           "Color",
@@ -86,50 +122,6 @@ class ProductsDummyData {
         ],
       ),
       Product(
-        id: 3,
-        name: "Multi-Color Product",
-        description: "Product with multiple colors and sizes.",
-        brandId: 103,
-        brandName: "Another Brand",
-        brandLogoUrl: AppAssets.defaultImage,
-        rating: 4.5,
-        variations: [
-          ProductVariation(
-            id: 301,
-            productId: 3,
-            price: 39.99,
-            quantity: 30,
-            inStock: true,
-            productVariantImages: [
-              AppAssets.defaultImage,
-              AppAssets.defaultImage,
-              AppAssets.defaultImage,
-              AppAssets.defaultImage
-            ],
-            productPropertiesValues: [
-              ProductPropertyAndValue(property: "Color", value: "#0000FF"),
-              ProductPropertyAndValue(property: "Size", value: "L"),
-            ],
-          ),
-          ProductVariation(
-            id: 302,
-            productId: 3,
-            price: 42.99,
-            quantity: 20,
-            inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
-            productPropertiesValues: [
-              ProductPropertyAndValue(property: "Color", value: "#008000"),
-              ProductPropertyAndValue(property: "Size", value: "XL"),
-            ],
-          ),
-        ],
-        availableProperties: [
-          "Color",
-          "Size",
-        ],
-      ),
-      Product(
         id: 4,
         name: "Multi-Size Product",
         description: "Product with multiple sizes and materials.",
@@ -159,13 +151,42 @@ class ProductsDummyData {
             productVariantImages: [
               AppAssets.defaultImage,
               AppAssets.defaultImage,
-              AppAssets.defaultImage,
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Size", value: "M"),
+              ProductPropertyAndValue(property: "Material", value: "Polyester"),
+            ],
+          ),
+          ProductVariation(
+            id: 403,
+            productId: 4,
+            price: 54.99,
+            quantity: 10,
+            inStock: true,
+            productVariantImages: [
               AppAssets.defaultImage,
               AppAssets.defaultImage,
               AppAssets.defaultImage,
             ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Size", value: "M"),
+              ProductPropertyAndValue(property: "Material", value: "Cotton"),
+            ],
+          ),
+          ProductVariation(
+            id: 404,
+            productId: 4,
+            price: 59.99,
+            quantity: 5,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Size", value: "S"),
               ProductPropertyAndValue(property: "Material", value: "Polyester"),
             ],
           ),
@@ -191,7 +212,10 @@ class ProductsDummyData {
             price: 34.99,
             quantity: 10,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
             productPropertiesValues: [],
           ),
         ],
@@ -214,10 +238,6 @@ class ProductsDummyData {
             inStock: true,
             productVariantImages: [
               AppAssets.defaultImage,
-              AppAssets.defaultImage,
-              AppAssets.defaultImage,
-              AppAssets.defaultImage,
-              AppAssets.defaultImage,
             ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#FFA500"),
@@ -235,13 +255,130 @@ class ProductsDummyData {
               AppAssets.defaultImage
             ],
             productPropertiesValues: [
-              ProductPropertyAndValue(property: "Color", value: "#000000"),
+              ProductPropertyAndValue(property: "Color", value: "#FF0000"),
+              ProductPropertyAndValue(property: "Material", value: "Canvas"),
+            ],
+          ),
+          ProductVariation(
+            id: 503,
+            productId: 5,
+            price: 49.99,
+            quantity: 25,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Color", value: "#FF0000"),
+              ProductPropertyAndValue(property: "Material", value: "Leather"),
+            ],
+          ),
+          ProductVariation(
+            id: 504,
+            productId: 5,
+            price: 54.99,
+            quantity: 30,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Color", value: "#FFA500"),
               ProductPropertyAndValue(property: "Material", value: "Canvas"),
             ],
           ),
         ],
         availableProperties: [
           "Color",
+          "Material",
+        ],
+      ),
+      Product(
+        id: 7,
+        name: "Color Product",
+        description: "Product with one color property.",
+        brandId: 106,
+        brandName: "Brand XYZ",
+        brandLogoUrl: AppAssets.defaultImage,
+        rating: 4.0,
+        variations: [
+          ProductVariation(
+            id: 701,
+            productId: 7,
+            price: 29.99,
+            quantity: 10,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Color", value: "#0000FF"),
+            ],
+          ),
+        ],
+        availableProperties: [
+          "Color",
+        ],
+      ),
+      Product(
+        id: 8,
+        name: "One Size Product",
+        description: "Product with one size variation.",
+        brandId: 107,
+        brandName: "Brand Basel",
+        brandLogoUrl: AppAssets.defaultImage,
+        rating: 4.0,
+        variations: [
+          ProductVariation(
+            id: 801,
+            productId: 8,
+            price: 29.99,
+            quantity: 10,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Size", value: "2XL"),
+            ],
+          ),
+        ],
+        availableProperties: [
+          "Size",
+        ],
+      ),
+      Product(
+        id: 9,
+        name: "Material Product",
+        description: "Product with material property.",
+        brandId: 108,
+        brandName: "Flutter Internship",
+        brandLogoUrl: AppAssets.defaultImage,
+        rating: 4.0,
+        variations: [
+          ProductVariation(
+            id: 901,
+            productId: 9,
+            price: 29.99,
+            quantity: 10,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Material", value: "Cotton"),
+            ],
+          ),
+        ],
+        availableProperties: [
           "Material",
         ],
       )

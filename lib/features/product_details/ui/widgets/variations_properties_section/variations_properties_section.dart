@@ -9,7 +9,7 @@ import 'package:slash_product_details_app/features/product_details/ui/widgets/sc
 import 'package:slash_product_details_app/features/product_details/ui/widgets/variations_properties_section/variations_properties_section_name.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/variations_properties_section/variations_properties_value_component/variations_properties_value_component.dart';
 
-class VariationsPropertiesSection extends StatelessWidget {
+class VariationsPropertiesSection extends StatefulWidget {
   final String variationsPropertyName;
   final List<String> variationsPropertiesValues;
   const VariationsPropertiesSection(
@@ -18,26 +18,41 @@ class VariationsPropertiesSection extends StatelessWidget {
       required this.variationsPropertiesValues});
 
   @override
+  State<VariationsPropertiesSection> createState() =>
+      _VariationsPropertiesSectionState();
+}
+
+class _VariationsPropertiesSectionState
+    extends State<VariationsPropertiesSection> {
+  @override
+  void initState() {
+    CurrentVariationPropertiesValues
+            .currentVariationPropertiesValues[widget.variationsPropertyName] =
+        widget.variationsPropertiesValues[0];
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         VariationsPropertiesSectionName(
-          variationsPropertyName: variationsPropertyName,
+          variationsPropertyName: widget.variationsPropertyName,
         ),
         SizedBox(
           height: 10 * SizeConfig.verticalBlock,
         ),
         ScrollableListFromCenter(
             children: List.generate(
-                variationsPropertiesValues.length,
+                widget.variationsPropertiesValues.length,
                 (index) => GestureDetector(
                       onTap: () {
                         CurrentVariationPropertiesValues
                                     .currentVariationPropertiesValues[
-                                variationsPropertyName] =
-                            variationsPropertiesValues[index];
+                                widget.variationsPropertyName] =
+                            widget.variationsPropertiesValues[index];
                         SelectionCubit.get(context)
                             .select(selectionIndex: index);
                         VariationCubit.get(context).selectNewVariation();
@@ -50,7 +65,7 @@ class VariationsPropertiesSection extends StatelessWidget {
                         builder: (context, state) =>
                             VariationsPropertiesValueComponent(
                           variationsPropertyValueName:
-                              variationsPropertiesValues[index],
+                              widget.variationsPropertiesValues[index],
                           isSelected:
                               (state is SelectionInitialState && index == 0) ||
                                   (state is SelectionSelectedState &&

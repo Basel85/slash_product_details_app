@@ -8,19 +8,30 @@ import 'package:slash_product_details_app/features/product_details/data/maps/cur
 import 'package:slash_product_details_app/features/product_details/ui/widgets/product_colors_list/product_color.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/scrollable_list_from_center/scrollable_list_from_center.dart';
 
-class ProductColorsList extends StatelessWidget with HexColorToColorConverter {
+class ProductColorsList extends StatefulWidget{
   final List<String> colors;
   const ProductColorsList({super.key, required this.colors});
 
   @override
+  State<ProductColorsList> createState() => _ProductColorsListState();
+}
+
+class _ProductColorsListState extends State<ProductColorsList> with HexColorToColorConverter {
+  @override
+  initState() {
+    CurrentVariationPropertiesValues
+        .currentVariationPropertiesValues["Color"] = widget.colors[0];
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     return ScrollableListFromCenter(
-        children: List.generate(colors.length, (index) {
-      Color color = convertHexColorToColor(colors[index]);
+        children: List.generate(widget.colors.length, (index) {
+      Color color = convertHexColorToColor(widget.colors[index]);
       return GestureDetector(
         onTap: () {
             CurrentVariationPropertiesValues
-                .currentVariationPropertiesValues["Color"] = colors[index];
+                .currentVariationPropertiesValues["Color"] = widget.colors[index];
             SelectionCubit.get(context).select(selectionIndex: index);
             VariationCubit.get(context).selectNewVariation();
           },
@@ -31,7 +42,7 @@ class ProductColorsList extends StatelessWidget with HexColorToColorConverter {
                   current.currentSelectionIndex == index),
           builder: (context, state) => ProductColor(
             color: color,
-            isNotLast: index < colors.length - 1,
+            isNotLast: index < widget.colors.length - 1,
             isSelected: (state is SelectionInitialState && index == 0) ||
                 (state is SelectionSelectedState &&
                     state.currentSelectionIndex == index),

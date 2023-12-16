@@ -7,6 +7,7 @@ import 'package:slash_product_details_app/core/widgets/custom_appbar/custom_appb
 import 'package:slash_product_details_app/core/widgets/custom_button/custom_button.dart';
 import 'package:slash_product_details_app/core/mixins/variations_properties_values_getter.dart';
 import 'package:slash_product_details_app/features/product_details/cubits/selection/selection_cubit.dart';
+import 'package:slash_product_details_app/features/product_details/data/maps/current_variation_properties_values_updater.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/description_component/description_component.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/image_slider/image_slider.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/product_colors_list/product_colors_list.dart';
@@ -27,6 +28,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
   Map<String, List<String>> _variationsPropertiesValues = {};
   @override
   void initState() {
+    CurrentVariationPropertiesValues.currentVariationPropertiesValues = {};
     _variationsPropertiesValues =
         getVariationsPropertiesValues(product: widget.product);
     super.initState();

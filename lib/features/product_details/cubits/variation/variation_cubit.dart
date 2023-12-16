@@ -15,11 +15,9 @@ class VariationCubit extends Cubit<VariationState> {
   bool _checkIfVariationIsAvailable(ProductVariation productVariation) {
     for (final productPropertyAndValue
         in productVariation.productPropertiesValues) {
-      if (!(CurrentVariationPropertiesValues
-              .currentVariationPropertiesValues
+      if (!(CurrentVariationPropertiesValues.currentVariationPropertiesValues
               .containsKey(productPropertyAndValue.property) &&
-          CurrentVariationPropertiesValues
-                      .currentVariationPropertiesValues[
+          CurrentVariationPropertiesValues.currentVariationPropertiesValues[
                   productPropertyAndValue.property] ==
               productPropertyAndValue.value)) {
         return false;
@@ -31,7 +29,7 @@ class VariationCubit extends Cubit<VariationState> {
   void selectNewVariation() {
     _previousProductVariation = _currentProductVariation;
     for (final productVariation in productVariations) {
-      if(_checkIfVariationIsAvailable(productVariation)){
+      if (_checkIfVariationIsAvailable(productVariation)) {
         _currentProductVariation = productVariation;
         break;
       }
