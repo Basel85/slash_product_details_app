@@ -63,7 +63,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
               BlocProvider(
                 create: (context) => SelectionCubit(),
                 child: VariationsPropertiesSection(
-                  variationsPropertyName: "Select Size",
+                  variationsPropertyName: "Size",
                   variationsPropertiesValues:
                       _variationsPropertiesValues["Size"]!,
                 ),
@@ -74,7 +74,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
               BlocProvider(
                 create: (context) => SelectionCubit(),
                 child: VariationsPropertiesSection(
-                  variationsPropertyName: "Select Material",
+                  variationsPropertyName: "Material",
                   variationsPropertiesValues:
                       _variationsPropertiesValues["Material"]!,
                 ),

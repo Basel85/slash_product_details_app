@@ -21,12 +21,15 @@ class ProductsDummyData {
             price: 49.99,
             quantity: 100,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#008000"),
               ProductPropertyAndValue(property: "Size", value: "XL"),
-              ProductPropertyAndValue(
-                  property: "Material", value: "Cotton"),
+              ProductPropertyAndValue(property: "Material", value: "Cotton"),
             ],
           ),
           ProductVariation(
@@ -35,16 +38,16 @@ class ProductsDummyData {
             price: 59.99,
             quantity: 50,
             inStock: false,
-            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#0000FF"),
               ProductPropertyAndValue(property: "Size", value: "L"),
-              ProductPropertyAndValue(
-                  property: "Material", value: "Polyester"),
+              ProductPropertyAndValue(property: "Material", value: "Polyester"),
             ],
-
           ),
-          
         ],
         availableProperties: [
           "Color",
@@ -67,10 +70,12 @@ class ProductsDummyData {
             price: 29.99,
             quantity: 50,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
             productPropertiesValues: [
-              ProductPropertyAndValue(
-                  property: "Color", value: "#FF0000"),
+              ProductPropertyAndValue(property: "Color", value: "#FF0000"),
               ProductPropertyAndValue(property: "Size", value: "M"),
             ],
           ),
@@ -95,7 +100,12 @@ class ProductsDummyData {
             price: 39.99,
             quantity: 30,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#0000FF"),
               ProductPropertyAndValue(property: "Size", value: "L"),
@@ -114,7 +124,7 @@ class ProductsDummyData {
             ],
           ),
         ],
-        availableProperties:  [
+        availableProperties: [
           "Color",
           "Size",
         ],
@@ -137,8 +147,7 @@ class ProductsDummyData {
             productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Size", value: "S"),
-              ProductPropertyAndValue(
-                  property: "Material", value: "Cotton"),
+              ProductPropertyAndValue(property: "Material", value: "Cotton"),
             ],
           ),
           ProductVariation(
@@ -147,11 +156,17 @@ class ProductsDummyData {
             price: 52.99,
             quantity: 15,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+            ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Size", value: "M"),
-              ProductPropertyAndValue(
-                  property: "Material", value: "Polyester"),
+              ProductPropertyAndValue(property: "Material", value: "Polyester"),
             ],
           ),
         ],
@@ -197,11 +212,16 @@ class ProductsDummyData {
             price: 39.99,
             quantity: 15,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+            ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#FFA500"),
-              ProductPropertyAndValue(
-                  property: "Material", value: "Leather"),
+              ProductPropertyAndValue(property: "Material", value: "Leather"),
             ],
           ),
           ProductVariation(
@@ -210,11 +230,13 @@ class ProductsDummyData {
             price: 44.99,
             quantity: 20,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#000000"),
-              ProductPropertyAndValue(
-                  property: "Material", value: "Canvas"),
+              ProductPropertyAndValue(property: "Material", value: "Canvas"),
             ],
           ),
         ],

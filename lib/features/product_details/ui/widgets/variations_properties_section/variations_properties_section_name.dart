@@ -7,7 +7,7 @@ class VariationsPropertiesSectionName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(variationsPropertyName,
+    return Text("Select $variationsPropertyName",
       style: TextStyle(
         color: Colors.white,
         fontSize: 18*SizeConfig.textRatio,
