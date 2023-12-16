@@ -75,8 +75,6 @@ class _ImageSliderState extends State<ImageSlider> {
                     (index) => GestureDetector(
                           onTap: () {
                             _carouselController.animateToPage(index);
-                            SelectionCubit.get(context)
-                                .select(selectionIndex: index);
                           },
                           child: BlocBuilder<SelectionCubit, SelectionState>(
                             buildWhen: (previous, current) =>
