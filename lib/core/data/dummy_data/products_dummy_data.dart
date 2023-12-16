@@ -42,7 +42,14 @@ class ProductsDummyData {
               ProductPropertyAndValue(
                   property: "Material", value: "Polyester"),
             ],
+
           ),
+          
+        ],
+        availableProperties: [
+          "Color",
+          "Size",
+          "Material",
         ],
       ),
       Product(
@@ -67,6 +74,10 @@ class ProductsDummyData {
               ProductPropertyAndValue(property: "Size", value: "M"),
             ],
           ),
+        ],
+        availableProperties: [
+          "Color",
+          "Size",
         ],
       ),
       Product(
@@ -102,6 +113,10 @@ class ProductsDummyData {
               ProductPropertyAndValue(property: "Size", value: "XL"),
             ],
           ),
+        ],
+        availableProperties:  [
+          "Color",
+          "Size",
         ],
       ),
       Product(
@@ -140,6 +155,10 @@ class ProductsDummyData {
             ],
           ),
         ],
+        availableProperties: [
+          "Size",
+          "Material",
+        ],
       ),
       Product(
         id: 5,
@@ -161,6 +180,7 @@ class ProductsDummyData {
             productPropertiesValues: [],
           ),
         ],
+        availableProperties: [],
       ),
       Product(
         id: 6,
@@ -197,6 +217,10 @@ class ProductsDummyData {
                   property: "Material", value: "Canvas"),
             ],
           ),
+        ],
+        availableProperties: [
+          "Color",
+          "Material",
         ],
       )
     ];

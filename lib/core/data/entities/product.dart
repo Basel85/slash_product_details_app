@@ -9,6 +9,7 @@ class Product {
   final String? brandLogoUrl;
   final double rating;
   final List<ProductVariation> variations;
+  final List<String> availableProperties;
 
   Product({
     required this.id,
@@ -19,5 +20,6 @@ class Product {
     this.brandLogoUrl,
     required this.rating,
     required this.variations,
+    required this.availableProperties,
   });
 }
