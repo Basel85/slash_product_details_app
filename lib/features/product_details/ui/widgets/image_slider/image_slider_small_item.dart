@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
+import 'package:slash_product_details_app/core/widgets/rounded_image/rounded_image.dart';
 
 class ImageSliderSmallItem extends StatelessWidget {
-  const ImageSliderSmallItem({super.key});
+  final String productImageAssetPath;
+  const ImageSliderSmallItem({super.key, required this.productImageAssetPath});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +15,7 @@ class ImageSliderSmallItem extends StatelessWidget {
         color: Colors.grey,
         borderRadius: BorderRadius.circular(10),
       ),
+      child: RoundedImage(productImageAssetPath:  productImageAssetPath),
     );
   }
 }

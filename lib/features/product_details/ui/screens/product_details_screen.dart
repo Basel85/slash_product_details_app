@@ -40,7 +40,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
               EdgeInsets.symmetric(horizontal: 20 * SizeConfig.horizontalBlock),
           children: [
             Gap(50 * SizeConfig.verticalBlock),
-            const ImageSlider(),
+            ImageSlider(
+              productImages: widget.product.variations[0].productVariantImages,
+            ),
             Gap(10 * SizeConfig.verticalBlock),
             ProductInfo(
               product: widget.product,

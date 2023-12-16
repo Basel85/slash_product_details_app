@@ -7,16 +7,19 @@ import 'package:slash_product_details_app/features/product_details/ui/widgets/im
 import 'package:slash_product_details_app/features/product_details/ui/widgets/scrollable_list_from_center/scrollable_list_from_center.dart';
 
 class ImageSlider extends StatelessWidget {
-  const ImageSlider({super.key});
+  final List<String> productImages;
+  const ImageSlider({super.key, required this.productImages});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         CarouselSlider.builder(
-          itemCount: 5,
+          itemCount: productImages.length,
           itemBuilder: (context, index, realIndex) {
-            return const ImageSliderBigItem();
+            return ImageSliderBigItem(
+              productImageAssetPath: productImages[index],
+            );
           },
           options: CarouselOptions(
             height: 200 * SizeConfig.verticalBlock,
@@ -28,14 +31,18 @@ class ImageSlider extends StatelessWidget {
         Gap(40 * SizeConfig.verticalBlock),
         ScrollableListFromCenter(
             children: List.generate(
-                5,
-                (index) => index < 4
+                productImages.length,
+                (index) => index < productImages.length - 1
                     ? Padding(
                         padding: EdgeInsets.only(
                             right: 10.0 * SizeConfig.horizontalBlock),
-                        child: const ImageSliderSmallItem(),
+                        child: ImageSliderSmallItem(
+                          productImageAssetPath: productImages[index],
+                        ),
                       )
-                    : const ImageSliderSmallItem())),
+                    : ImageSliderSmallItem(
+                        productImageAssetPath: productImages[index],
+                      ))),
       ],
     );
   }

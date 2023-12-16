@@ -21,7 +21,7 @@ class ProductsDummyData {
             price: 49.99,
             quantity: 100,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#008000"),
               ProductPropertyAndValue(property: "Size", value: "XL"),
@@ -35,7 +35,7 @@ class ProductsDummyData {
             price: 59.99,
             quantity: 50,
             inStock: false,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#0000FF"),
               ProductPropertyAndValue(property: "Size", value: "L"),
@@ -67,10 +67,10 @@ class ProductsDummyData {
             price: 29.99,
             quantity: 50,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage],
             productPropertiesValues: [
               ProductPropertyAndValue(
-                  property: "Color", value: "#FF0000"), // Red
+                  property: "Color", value: "#FF0000"),
               ProductPropertyAndValue(property: "Size", value: "M"),
             ],
           ),
@@ -95,7 +95,7 @@ class ProductsDummyData {
             price: 39.99,
             quantity: 30,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage, AppAssets.defaultImage],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#0000FF"),
               ProductPropertyAndValue(property: "Size", value: "L"),
@@ -197,7 +197,7 @@ class ProductsDummyData {
             price: 39.99,
             quantity: 15,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#FFA500"),
               ProductPropertyAndValue(
@@ -210,7 +210,7 @@ class ProductsDummyData {
             price: 44.99,
             quantity: 20,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [AppAssets.defaultImage, AppAssets.defaultImage],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#000000"),
               ProductPropertyAndValue(
