@@ -14,7 +14,7 @@ class CustomIconButton extends StatelessWidget {
       child: Icon(
         iconData,
         color: Colors.white,
-        size: 16 * SizeConfig.textRatio,
+        size: 20 * SizeConfig.textRatio,
       ),
     );
   }

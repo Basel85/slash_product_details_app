@@ -1,3 +1,7 @@
-abstract class CounterStates {}
-class CounterInitialState extends CounterStates {}
-class CounterChangedState extends CounterStates {}
+abstract class CounterState {}
+class CounterInitialState extends CounterState {}
+
+class CounterChangedState extends CounterState{
+  final int counter;
+  CounterChangedState({required this.counter});
+}

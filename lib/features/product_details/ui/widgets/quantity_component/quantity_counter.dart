@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 import 'package:slash_product_details_app/core/widgets/custom_icon_button/custom_icon_button.dart';
+import 'package:slash_product_details_app/features/product_details/cubits/counter/counter_cubit.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/quantity_component/quantity_value.dart';
 
 class QuantityCounter extends StatelessWidget {
@@ -27,7 +28,9 @@ class QuantityCounter extends StatelessWidget {
                   vertical: 5.0 * SizeConfig.verticalBlock),
               child: CustomIconButton(
                 iconData: Icons.remove,
-                onTap: () {},
+                onTap: () {
+                  CounterCubit.get(context).decrement();
+                },
               ),
             ),
             VerticalDivider(
@@ -49,7 +52,9 @@ class QuantityCounter extends StatelessWidget {
                   EdgeInsets.symmetric(vertical: 5 * SizeConfig.verticalBlock),
               child: CustomIconButton(
                 iconData: Icons.add,
-                onTap: () {},
+                onTap: () {
+                  CounterCubit.get(context).increment();
+                },
               ),
             ),
           ],
