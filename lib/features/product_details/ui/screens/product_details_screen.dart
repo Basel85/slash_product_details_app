@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:slash_product_details_app/core/data/entities/product.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 import 'package:slash_product_details_app/core/widgets/custom_appbar/custom_appbar.dart';
 import 'package:slash_product_details_app/core/widgets/custom_button/custom_button.dart';
 import 'package:slash_product_details_app/core/mixins/variations_properties_values_getter.dart';
+import 'package:slash_product_details_app/features/product_details/cubits/selection/selection_cubit.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/description_component/description_component.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/image_slider/image_slider.dart';
 import 'package:slash_product_details_app/features/product_details/ui/widgets/product_colors_list/product_colors_list.dart';
@@ -49,24 +51,33 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
             ),
             Gap(30 * SizeConfig.verticalBlock),
             if (widget.product.availableProperties.contains("Color")) ...{
-              ProductColorsList(
-                colors: _variationsPropertiesValues["Color"]!,
+              BlocProvider(
+                create: (context) => SelectionCubit(),
+                child: ProductColorsList(
+                  colors: _variationsPropertiesValues["Color"]!,
+                ),
               ),
               Gap(30 * SizeConfig.verticalBlock),
             },
             if (widget.product.availableProperties.contains("Size")) ...{
-              VariationsPropertiesSection(
-                variationsPropertyName: "Select Size",
-                variationsPropertiesValues:
-                    _variationsPropertiesValues["Size"]!,
+              BlocProvider(
+                create: (context) => SelectionCubit(),
+                child: VariationsPropertiesSection(
+                  variationsPropertyName: "Select Size",
+                  variationsPropertiesValues:
+                      _variationsPropertiesValues["Size"]!,
+                ),
               ),
               Gap(30 * SizeConfig.verticalBlock),
             },
             if (widget.product.availableProperties.contains("Material")) ...{
-              VariationsPropertiesSection(
-                variationsPropertyName: "Select Material",
-                variationsPropertiesValues:
-                    _variationsPropertiesValues["Material"]!,
+              BlocProvider(
+                create: (context) => SelectionCubit(),
+                child: VariationsPropertiesSection(
+                  variationsPropertyName: "Select Material",
+                  variationsPropertiesValues:
+                      _variationsPropertiesValues["Material"]!,
+                ),
               ),
               Gap(30 * SizeConfig.verticalBlock),
             },
