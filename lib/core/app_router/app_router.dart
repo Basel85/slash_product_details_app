@@ -5,10 +5,15 @@ import 'package:slash_product_details_app/features/home/cubits/get_all_products/
 import 'package:slash_product_details_app/features/home/ui/screens/home_screen.dart';
 import 'package:slash_product_details_app/features/product_details/cubits/variation/variation_cubit.dart';
 import 'package:slash_product_details_app/features/product_details/ui/screens/product_details_screen.dart';
+import 'package:slash_product_details_app/features/splash/ui/screens/splash_screen.dart';
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case '/splashScreen':
+        return MaterialPageRoute(
+          builder: (_) => const SplashScreen()
+        );
       case '/homeScreen':
         return MaterialPageRoute(
           builder: (_) => MultiBlocProvider(
