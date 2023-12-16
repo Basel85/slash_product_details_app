@@ -27,7 +27,9 @@ class ProductDetailsScreen extends StatelessWidget {
             Gap(50 * SizeConfig.verticalBlock),
             const ImageSlider(),
             Gap(10 * SizeConfig.verticalBlock),
-            const ProductInfo(),
+            ProductInfo(
+              product: product,
+            ),
             Gap(30 * SizeConfig.verticalBlock),
             const ProductColorsList(),
             Gap(30 * SizeConfig.verticalBlock),

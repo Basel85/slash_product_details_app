@@ -5,7 +5,9 @@ import 'package:slash_product_details_app/features/product_details/ui/widgets/pr
 import 'package:slash_product_details_app/features/product_details/ui/widgets/product_info/product_info_brand/product_info_brand_name.dart';
 
 class ProductInfoBrand extends StatelessWidget {
-  const ProductInfoBrand({super.key});
+  final String productInfoBrandImageAssetPath;
+  final String productInfoBrandName;
+  const ProductInfoBrand({super.key, required this.productInfoBrandImageAssetPath, required this.productInfoBrandName});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +15,9 @@ class ProductInfoBrand extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const ProductInfoBrandLogo(),
+        ProductInfoBrandLogo(productInfoBrandLogoAssetPath: productInfoBrandImageAssetPath,),
         Gap(10 * SizeConfig.verticalBlock),
-        const ProductInfoBrandName(),
+        ProductInfoBrandName(productInfoBrandName: productInfoBrandName,),
       ],
     );
   }
