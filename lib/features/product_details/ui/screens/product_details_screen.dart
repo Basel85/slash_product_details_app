@@ -41,7 +41,9 @@ class ProductDetailsScreen extends StatelessWidget {
               variationsPropertiesValues: ["Cotton"],
             ),
             Gap(30 * SizeConfig.verticalBlock),
-            const DescriptionComponent(),
+            DescriptionComponent(
+              descriptionText: product.description,
+            ),
             Gap(30 * SizeConfig.verticalBlock),
             const QuantityComponent(),
             Gap(30 * SizeConfig.verticalBlock),

@@ -4,7 +4,8 @@ import 'package:slash_product_details_app/features/product_details/ui/widgets/de
 import 'package:slash_product_details_app/features/product_details/ui/widgets/description_component/description_text.dart';
 
 class DescriptionComponent extends StatelessWidget {
-  const DescriptionComponent({super.key});
+  final String descriptionText;
+  const DescriptionComponent({super.key, required this.descriptionText});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,6 @@ class DescriptionComponent extends StatelessWidget {
             horizontal: 20 * SizeConfig.horizontalBlock,
             vertical: 15 * SizeConfig.verticalBlock),
         iconColor: Colors.white,
-        children: const [DescriptionText()]);
+        children: [DescriptionText(descriptionText: descriptionText,)]);
   }
 }
