@@ -1,198 +1,199 @@
-import 'package:slash_product_details_app/core/data/models/product_model.dart';
-import 'package:slash_product_details_app/core/data/models/product_property_and_value_model.dart';
-import 'package:slash_product_details_app/core/data/models/product_variation_model.dart';
+import 'package:slash_product_details_app/core/app_assets/app_assets.dart';
+import 'package:slash_product_details_app/core/data/entities/product.dart';
+import 'package:slash_product_details_app/core/data/entities/product_property_and_value.dart';
+import 'package:slash_product_details_app/core/data/entities/product_variation.dart';
 
 class ProductsDummyData {
-  static Future<List<ProductModel>> getAllProducts() async {
-    List<ProductModel> products = [
-      ProductModel(
+  static Future<List<Product>> getAllProducts() async {
+    List<Product> products = [
+      Product(
         id: 1,
         name: "Sample Product",
         description: "This is a sample product description.",
         brandId: 101,
         brandName: "Sample Brand",
-        brandLogoUrl: "https://samplebrand.com/logo.png",
+        brandLogoUrl: AppAssets.defaultImage,
         rating: 4.5,
         variations: [
-          ProductVariationModel(
+          ProductVariation(
             id: 101,
             productId: 1,
             price: 49.99,
             quantity: 100,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image1.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Color", value: "#008000"),
-              ProductPropertyAndValueModel(property: "Size", value: "XL"),
-              ProductPropertyAndValueModel(
+              ProductPropertyAndValue(property: "Color", value: "#008000"),
+              ProductPropertyAndValue(property: "Size", value: "XL"),
+              ProductPropertyAndValue(
                   property: "Material", value: "Cotton"),
             ],
           ),
-          ProductVariationModel(
+          ProductVariation(
             id: 102,
             productId: 1,
             price: 59.99,
             quantity: 50,
             inStock: false,
-            productVariantImages: ["https://sampleproduct.com/image2.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Color", value: "#0000FF"),
-              ProductPropertyAndValueModel(property: "Size", value: "L"),
-              ProductPropertyAndValueModel(
+              ProductPropertyAndValue(property: "Color", value: "#0000FF"),
+              ProductPropertyAndValue(property: "Size", value: "L"),
+              ProductPropertyAndValue(
                   property: "Material", value: "Polyester"),
             ],
           ),
         ],
       ),
-      ProductModel(
+      Product(
         id: 2,
         name: "Single Color Product",
         description: "Product with one color and size.",
         brandId: 102,
         brandName: "Sample Brand",
-        brandLogoUrl: "https://samplebrand.com/logo.png",
+        brandLogoUrl: AppAssets.defaultImage,
         rating: 4.0,
         variations: [
-          ProductVariationModel(
+          ProductVariation(
             id: 102,
             productId: 2,
             price: 29.99,
             quantity: 50,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image1.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(
+              ProductPropertyAndValue(
                   property: "Color", value: "#FF0000"), // Red
-              ProductPropertyAndValueModel(property: "Size", value: "M"),
+              ProductPropertyAndValue(property: "Size", value: "M"),
             ],
           ),
         ],
       ),
-      ProductModel(
+      Product(
         id: 3,
         name: "Multi-Color Product",
         description: "Product with multiple colors and sizes.",
         brandId: 103,
         brandName: "Another Brand",
-        brandLogoUrl: "https://anotherbrand.com/logo.png",
+        brandLogoUrl: AppAssets.defaultImage,
         rating: 4.5,
         variations: [
-          ProductVariationModel(
+          ProductVariation(
             id: 301,
             productId: 3,
             price: 39.99,
             quantity: 30,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image2.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Color", value: "#0000FF"),
-              ProductPropertyAndValueModel(property: "Size", value: "L"),
+              ProductPropertyAndValue(property: "Color", value: "#0000FF"),
+              ProductPropertyAndValue(property: "Size", value: "L"),
             ],
           ),
-          ProductVariationModel(
+          ProductVariation(
             id: 302,
             productId: 3,
             price: 42.99,
             quantity: 20,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image3.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Color", value: "#008000"),
-              ProductPropertyAndValueModel(property: "Size", value: "XL"),
+              ProductPropertyAndValue(property: "Color", value: "#008000"),
+              ProductPropertyAndValue(property: "Size", value: "XL"),
             ],
           ),
         ],
       ),
-      ProductModel(
+      Product(
         id: 4,
         name: "Multi-Size Product",
         description: "Product with multiple sizes and materials.",
         brandId: 104,
         brandName: "Yet Another Brand",
-        brandLogoUrl: "https://yetanotherbrand.com/logo.png",
+        brandLogoUrl: AppAssets.defaultImage,
         rating: 4.2,
         variations: [
-          ProductVariationModel(
+          ProductVariation(
             id: 401,
             productId: 4,
             price: 49.99,
             quantity: 25,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image4.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Size", value: "S"),
-              ProductPropertyAndValueModel(
+              ProductPropertyAndValue(property: "Size", value: "S"),
+              ProductPropertyAndValue(
                   property: "Material", value: "Cotton"),
             ],
           ),
-          ProductVariationModel(
+          ProductVariation(
             id: 402,
             productId: 4,
             price: 52.99,
             quantity: 15,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image5.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Size", value: "M"),
-              ProductPropertyAndValueModel(
+              ProductPropertyAndValue(property: "Size", value: "M"),
+              ProductPropertyAndValue(
                   property: "Material", value: "Polyester"),
             ],
           ),
         ],
       ),
-      ProductModel(
+      Product(
         id: 5,
         name: "No Size Product",
         description:
             "Product with no size property and no variations property values.",
         brandId: 105,
         brandName: "Brand XYZ",
-        brandLogoUrl: "https://brandxyz.com/logo.png",
+        brandLogoUrl: AppAssets.defaultImage,
         rating: 3.8,
         variations: [
-          ProductVariationModel(
+          ProductVariation(
             id: 501,
             productId: 5,
             price: 34.99,
             quantity: 10,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image6.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [],
           ),
         ],
       ),
-      ProductModel(
+      Product(
         id: 6,
         name: "No Size Product",
         description: "Product with no size property.",
         brandId: 105,
         brandName: "Brand ABC",
-        brandLogoUrl: "https://brandabc.com/logo.png",
+        brandLogoUrl: AppAssets.defaultImage,
         rating: 4.1,
         variations: [
-          ProductVariationModel(
+          ProductVariation(
             id: 501,
             productId: 5,
             price: 39.99,
             quantity: 15,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image7.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Color", value: "#FFA500"),
-              ProductPropertyAndValueModel(
+              ProductPropertyAndValue(property: "Color", value: "#FFA500"),
+              ProductPropertyAndValue(
                   property: "Material", value: "Leather"),
             ],
           ),
-          ProductVariationModel(
+          ProductVariation(
             id: 502,
             productId: 5,
             price: 44.99,
             quantity: 20,
             inStock: true,
-            productVariantImages: ["https://sampleproduct.com/image8.jpg"],
+            productVariantImages: [AppAssets.defaultImage],
             productPropertiesValues: [
-              ProductPropertyAndValueModel(property: "Color", value: "#000000"),
-              ProductPropertyAndValueModel(
+              ProductPropertyAndValue(property: "Color", value: "#000000"),
+              ProductPropertyAndValue(
                   property: "Material", value: "Canvas"),
             ],
           ),

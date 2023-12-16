@@ -1,5 +1,5 @@
 
-import 'package:slash_product_details_app/core/data/models/product_model.dart';
+import 'package:slash_product_details_app/core/data/entities/product.dart';
 
 class GetAllProductsState {}
 
@@ -8,7 +8,7 @@ class GetAllProductsInitial extends GetAllProductsState {}
 class GetAllProductsLoadingState extends GetAllProductsState {}
 
 class GetAllProductsSuccessState extends GetAllProductsState {
-  final List<ProductModel> products;
+  final List<Product> products;
 
   GetAllProductsSuccessState({required this.products});
 }

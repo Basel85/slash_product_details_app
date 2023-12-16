@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 
 class ProductCardPrice extends StatelessWidget {
-  final double productCardPrice;
+  final num productCardPrice;
   const ProductCardPrice({super.key, required this.productCardPrice});
 
   @override

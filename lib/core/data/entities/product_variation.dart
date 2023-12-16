@@ -1,15 +1,15 @@
-import 'package:slash_product_details_app/core/data/models/product_property_and_value_model.dart';
+import 'package:slash_product_details_app/core/data/entities/product_property_and_value.dart';
 
-class ProductVariationModel {
+class ProductVariation {
   final int id;
   final int productId;
   final num price;
   final int quantity;
   final bool inStock;
   final List<String> productVariantImages;
-  final List<ProductPropertyAndValueModel> productPropertiesValues;
+  final List<ProductPropertyAndValue> productPropertiesValues;
 
-  ProductVariationModel({
+  ProductVariation({
     required this.id,
     required this.productId,
     required this.price,

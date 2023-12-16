@@ -1,8 +1,8 @@
-class ProductPropertyAndValueModel {
+class ProductPropertyAndValue {
   final String property;
   final String value;
 
-  ProductPropertyAndValueModel({
+  ProductPropertyAndValue({
     required this.property,
     required this.value,
   });

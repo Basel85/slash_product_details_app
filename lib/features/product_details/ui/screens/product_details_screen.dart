@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:slash_product_details_app/core/data/entities/product.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 import 'package:slash_product_details_app/core/widgets/custom_appbar/custom_appbar.dart';
 import 'package:slash_product_details_app/core/widgets/custom_button/custom_button.dart';
@@ -11,7 +12,8 @@ import 'package:slash_product_details_app/features/product_details/ui/widgets/qu
 import 'package:slash_product_details_app/features/product_details/ui/widgets/variations_properties_section/variations_properties_section.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
-  const ProductDetailsScreen({super.key});
+  final Product product;
+  const ProductDetailsScreen({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {

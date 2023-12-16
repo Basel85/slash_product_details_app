@@ -1,6 +1,6 @@
-import 'package:slash_product_details_app/core/data/models/product_variation_model.dart';
+import 'package:slash_product_details_app/core/data/entities/product_variation.dart';
 
-class ProductModel {
+class Product {
   final int id;
   final String name;
   final String description;
@@ -8,9 +8,9 @@ class ProductModel {
   final String? brandName;
   final String? brandLogoUrl;
   final double rating;
-  final List<ProductVariationModel> variations;
+  final List<ProductVariation> variations;
 
-  ProductModel({
+  Product({
     required this.id,
     required this.name,
     required this.description,
