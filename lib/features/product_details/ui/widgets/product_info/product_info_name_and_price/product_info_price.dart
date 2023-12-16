@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 
 class ProductInfoPrice extends StatelessWidget {
-  const ProductInfoPrice({super.key});
+  final num productInfoPrice;
+  const ProductInfoPrice({super.key, required this.productInfoPrice});
 
   @override
   Widget build(BuildContext context) {
-    return Text("EGP 250",
+    return Text("EGP $productInfoPrice",
         style: TextStyle(
           color: Colors.white,
           fontSize: 15 * SizeConfig.textRatio,

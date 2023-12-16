@@ -13,7 +13,12 @@ class ProductInfo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const ProductInfoNameAndPrice(),
+        Expanded(
+          child: ProductInfoNameAndPrice(
+            productInfoName: product.name,
+            productInfoPrice: product.variations[0].price,
+          ),
+        ),
         ProductInfoBrand(
           productInfoBrandImageAssetPath: product.brandLogoUrl!,
           productInfoBrandName: product.brandName!,
