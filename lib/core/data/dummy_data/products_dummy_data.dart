@@ -8,8 +8,8 @@ class ProductsDummyData {
     List<Product> products = [
       Product(
         id: 1,
-        name: "Sample Product",
-        description: "This is a sample product description.",
+        name: "Multiple colors, sizes, and materials",
+        description: "This is a Multiple colors, sizes, and materials product description.",
         brandId: 101,
         brandName: "Sample Brand",
         brandLogoUrl: AppAssets.defaultImage,
@@ -56,6 +56,8 @@ class ProductsDummyData {
             inStock: true,
             productVariantImages: [
               AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
             ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#008000"),
@@ -93,8 +95,8 @@ class ProductsDummyData {
       ),
       Product(
         id: 2,
-        name: "Single Color Product",
-        description: "Product with one color and size.",
+        name: "Single Color and multi-size Product",
+        description: "Product with one color and multiple sizes.",
         brandId: 102,
         brandName: "Sample Brand",
         brandLogoUrl: AppAssets.defaultImage,
@@ -115,6 +117,23 @@ class ProductsDummyData {
               ProductPropertyAndValue(property: "Size", value: "M"),
             ],
           ),
+          ProductVariation(
+            id: 103,
+            productId: 2,
+            price: 34.99,
+            quantity: 25,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Color", value: "#FF0000"),
+              ProductPropertyAndValue(property: "Size", value: "L"),
+            ],
+          ),
         ],
         availableProperties: [
           "Color",
@@ -123,7 +142,7 @@ class ProductsDummyData {
       ),
       Product(
         id: 4,
-        name: "Multi-Size Product",
+        name: "Multi-Size and Multi-Material Product",
         description: "Product with multiple sizes and materials.",
         brandId: 104,
         brandName: "Yet Another Brand",
@@ -136,7 +155,13 @@ class ProductsDummyData {
             price: 49.99,
             quantity: 25,
             inStock: true,
-            productVariantImages: [AppAssets.defaultImage],
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Size", value: "S"),
               ProductPropertyAndValue(property: "Material", value: "Cotton"),
@@ -198,9 +223,9 @@ class ProductsDummyData {
       ),
       Product(
         id: 5,
-        name: "No Size Product",
+        name: "No Variations Product",
         description:
-            "Product with no size property and no variations property values.",
+            "Product no variations property values.",
         brandId: 105,
         brandName: "Brand XYZ",
         brandLogoUrl: AppAssets.defaultImage,
@@ -238,6 +263,8 @@ class ProductsDummyData {
             inStock: true,
             productVariantImages: [
               AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
             ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Color", value: "#FFA500"),
@@ -301,8 +328,8 @@ class ProductsDummyData {
       ),
       Product(
         id: 7,
-        name: "Color Product",
-        description: "Product with one color property.",
+        name: "Multi-Color Product",
+        description: "Product with multiple colors property.",
         brandId: 106,
         brandName: "Brand XYZ",
         brandLogoUrl: AppAssets.defaultImage,
@@ -322,6 +349,21 @@ class ProductsDummyData {
               ProductPropertyAndValue(property: "Color", value: "#0000FF"),
             ],
           ),
+          ProductVariation(
+            id: 702,
+            productId: 7,
+            price: 34.99,
+            quantity: 15,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Color", value: "#FFA500"),
+            ],
+          ),
         ],
         availableProperties: [
           "Color",
@@ -329,8 +371,8 @@ class ProductsDummyData {
       ),
       Product(
         id: 8,
-        name: "One Size Product",
-        description: "Product with one size variation.",
+        name: "Multi-Size Product",
+        description: "Product with multiple sizes variation.",
         brandId: 107,
         brandName: "Brand Basel",
         brandLogoUrl: AppAssets.defaultImage,
@@ -344,9 +386,25 @@ class ProductsDummyData {
             inStock: true,
             productVariantImages: [
               AppAssets.defaultImage,
+              AppAssets.defaultImage
             ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Size", value: "2XL"),
+            ],
+          ),
+          ProductVariation(
+            id: 802,
+            productId: 8,
+            price: 34.99,
+            quantity: 15,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Size", value: "3XL"),
             ],
           ),
         ],
@@ -356,8 +414,8 @@ class ProductsDummyData {
       ),
       Product(
         id: 9,
-        name: "Material Product",
-        description: "Product with material property.",
+        name: "Multi-Material Product",
+        description: "Product with multiple materials property.",
         brandId: 108,
         brandName: "Flutter Internship",
         brandLogoUrl: AppAssets.defaultImage,
@@ -375,6 +433,22 @@ class ProductsDummyData {
             ],
             productPropertiesValues: [
               ProductPropertyAndValue(property: "Material", value: "Cotton"),
+            ],
+          ),
+          ProductVariation(
+            id: 902,
+            productId: 9,
+            price: 34.99,
+            quantity: 15,
+            inStock: true,
+            productVariantImages: [
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage,
+              AppAssets.defaultImage
+            ],
+            productPropertiesValues: [
+              ProductPropertyAndValue(property: "Material", value: "Polyester"),
             ],
           ),
         ],

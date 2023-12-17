@@ -9,6 +9,7 @@ class GetAllProductsCubit extends Cubit<GetAllProductsState> {
   GetAllProductsCubit() : super(GetAllProductsInitial());
   static GetAllProductsCubit get(context) => BlocProvider.of(context);
   void getAllProducts() async {
+    // The is a simulation of calling an API to get all products because there is not API available
     emit(GetAllProductsLoadingState());
     try {
       final products = await GetAllProductsRepository().getAllProducts();
