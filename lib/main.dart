@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSwatch().copyWith(
               primary: AppColors.primaryColor,
               secondary: AppColors.secondaryColor)),
-      initialRoute: splashScreenPath,
+      initialRoute: homeScreenPath,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }
