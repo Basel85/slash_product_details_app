@@ -13,7 +13,8 @@ import 'package:slash_product_details_app/features/product_details/ui/widgets/sc
 
 class ImageSlider extends StatefulWidget {
   final List<String> productImages;
-  const ImageSlider({super.key, required this.productImages});
+  final int productId;
+  const ImageSlider({super.key, required this.productImages, required this.productId});
 
   @override
   State<ImageSlider> createState() => _ImageSliderState();

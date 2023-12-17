@@ -8,12 +8,12 @@ class ProductInfoName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      productInfoName,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 18 * SizeConfig.textRatio,
-        fontWeight: FontWeight.w600,
-      ),
+        productInfoName,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 18 * SizeConfig.textRatio,
+          fontWeight: FontWeight.w600,
+        ),
     );
   }
 }

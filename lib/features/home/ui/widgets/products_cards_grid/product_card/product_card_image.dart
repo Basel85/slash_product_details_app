@@ -3,7 +3,8 @@ import 'package:slash_product_details_app/core/responsitivity/size_config.dart';
 
 class ProductCardImage extends StatelessWidget {
   final String productCardImageAssetPath;
-  const ProductCardImage({super.key, required this.productCardImageAssetPath});
+  final int productId;
+  const ProductCardImage({super.key, required this.productCardImageAssetPath, required this.productId});
 
   @override
   Widget build(BuildContext context) {

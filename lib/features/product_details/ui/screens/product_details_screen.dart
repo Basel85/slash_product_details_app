@@ -53,6 +53,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
               child: ImageSlider(
                 productImages:
                     widget.product.variations[0].productVariantImages,
+                productId: widget.product.id,
               ),
             ),
             Gap(10 * SizeConfig.verticalBlock),

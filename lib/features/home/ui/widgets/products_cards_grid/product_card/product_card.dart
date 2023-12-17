@@ -19,7 +19,7 @@ class ProductCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ProductCardImage(productCardImageAssetPath: product.variations[0].productVariantImages[0],),
+          ProductCardImage(productId: product.id,productCardImageAssetPath: product.variations[0].productVariantImages[0],),
           Gap(5 * SizeConfig.verticalBlock),
           Row(
             children: [

@@ -22,12 +22,13 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          "Slash.",
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 90 * SizeConfig.textRatio,
-              fontWeight: FontWeight.bold),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(100),
+          child: Image.asset(
+            'assets/images/app_logo.jpg',
+            width: 200 * SizeConfig.textRatio,
+            height: 200 * SizeConfig.textRatio,
+          ),
         ),
       ),
     );
