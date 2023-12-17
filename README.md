@@ -1,16 +1,32 @@
-# slash_product_details_app
+# Slash E-commerce Flutter Demo App
 
-A new Flutter project.
+## Application Overview
+This Flutter app is designed to showcase a seamless user experience for exploring product variations within the context of the Slash E-commerce app. It includes a single-screen product details view and a home screen featuring a grid of simple product cards.
 
-## Getting Started
+## Product Information Structure
+The product information is structured as follows:
 
-This project is a starting point for a Flutter application.
+- A brand can sell multiple products.
+- Each product can have various available variations defined by properties like color, size, and material.
+- Variation properties can be null.
+- Products may have different pictures based on color or material.
+- The same product can have different prices depending on the selected variation.
 
-A few resources to get you started if this is your first Flutter project:
+## Application Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app includes the following features:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Home Screen:
+
+- Explore various products with a grid of product cards.
+- Select a product card to navigate to the corresponding product details screen.
+
+### Product Details Screen:
+
+- Display detailed product information, including images, colors, sizes,     materials, description, price, and brand name.
+- Customize the product variations.
+
+## Application Screenshots and Demo Video
+you can find the screenshots and demo video of the app through the following link: https://drive.google.com/drive/folders/1-EbHUs9JMqngy9eHAOwWan3JlxO9ZPKV?usp=sharing
+
+Happy coding! 🚀
